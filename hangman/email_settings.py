@@ -1,2 +1,2 @@
 MAIL_USERNAME = "testflask11@gmail.com"
-MAIL_PASSWORD = "asvp lnkt mviy tngm"
+MAIL_PASSWORD = "fqrb ogjp ahpj eatg"

@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 style="color: grey;">GAME STATISTICS</h2>
+<p><span style="color: grey;">User: {{ current_user.name }}</span></p>
+
+{% if today_statistics %}
+<h3 style="color: grey;">Statistics for today</h3>
+<div class="table-container">
+<table class="table table-striped table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th>Mistakes made</th>
+      <th>Guesses made</th>
+      <th>Guessed letters</th>
+      <th>Word to guess</th>
+      <th>Status</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for statistic in today_statistics %}
+      <tr>
+        <td>{{ statistic.mistakes_made }}</td>
+        <td>{{ statistic.guesses_made }}</td>
+        <td>{{ statistic.guessed_letters }}</td>
+        <td>{{ statistic.word_to_guess }}</td>
+        <td>{{ statistic.status }}</td>
+        <td>{{ statistic.timestamp.strftime("%Y-%m-%d %H:%M:%S") }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% else %}
+  <p style="color: grey;">No game statistics available for today!</p>
+{% endif %}
+
+{% if previous_days_statistics %}
+<h3 style="color: grey;">Statistics for previous days</h3>
+<div class="table-container">
+<table class="table table-striped table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th>Mistakes made</th>
+      <th>Guesses made</th>
+      <th>Guessed letters</th>
+      <th>Word to guess</th>
+      <th>Status</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for statistic in previous_days_statistics %}
+      <tr>
+        <td>{{ statistic.mistakes_made }}</td>
+        <td>{{ statistic.guesses_made }}</td>
+        <td>{{ statistic.guessed_letters }}</td>
+        <td>{{ statistic.word_to_guess }}</td>
+        <td>{{ statistic.status }}</td>
+        <td>{{ statistic.timestamp.strftime("%Y-%m-%d %H:%M:%S") }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% else %}
+  <p style="color: grey;">No game statistics available for previous days!</p>
+{% endif %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  {% if show_popup %}
+      $(document).ready(function(){
+          $('#statisticsModal').modal('show');
+      });
+  {% endif %}
+</script>
+
+<div class="modal fade" id="statisticsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Your achievements for today</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              {% if today_statistics %}
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th>Total games played today</th>
+                              <th>Games won today</th>
+                              <th>Games lost today</th>
+                              <th>Guesses made today</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>{{ today_statistics|length }}</td>
+                              <td>{{ today_statistics|selectattr('status', 'equalto', 'win')|list|length }}</td>
+                              <td>{{ today_statistics|selectattr('status', 'equalto', 'lost')|list|length }}</td>
+                              <td>{{ today_statistics|map(attribute='guesses_made')|sum }}</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              {% else %}
+                  <p>No statistics available for today</p>
+              {% endif %}
+          </div>
+      </div>
+  </div>
+</div>
+
+{% block gif_part %}
+{% block specific_part %}
+{% endblock %}
+{% endblock %}
+{% endblock content %}

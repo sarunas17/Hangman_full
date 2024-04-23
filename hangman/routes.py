@@ -1,206 +1,210 @@
+import datetime
 import secrets
 from PIL import Image
 import os
-from flask import render_template, redirect, url_for, flash, request
+from flask import render_template, redirect, session, url_for, flash, request
 from flask_login import current_user, logout_user, login_user, login_required
-from datetime import datetime
+
+
 from flask_mail import Message, Mail
 
 from hangman import forms, db, app, bcrypt, mail
-from hangman.models import Vartotojas, Irasas
+from datetime import datetime, timedelta
+from hangman.models import User
+from hangman.gamelogic import Hangman
+from hangman.mongo_file import database, MongoCRUD
+
 
 @app.route("/")
 def index():
     return render_template("index.html")
 
-@app.route("/registruotis", methods=['GET', 'POST'])
+
+@app.route("/signup", methods=["GET", "POST"])
 def registruotis():
     db.create_all()
     if current_user.is_authenticated:
-        return redirect(url_for('index'))
+        return redirect(url_for("index"))
     form = forms.RegistracijosForma()
     if form.validate_on_submit():
-        koduotas_slaptazodis = bcrypt.generate_password_hash(form.slaptazodis.data).decode('utf-8')
-        vartotojas = Vartotojas(vardas=form.vardas.data, el_pastas=form.el_pastas.data, slaptazodis=koduotas_slaptazodis)
+        if form.tikrinti_pasta(form.email):
+            return render_template("registruotis.html", title="Register", form=form)
+        koduotas_slaptazodis = bcrypt.generate_password_hash(
+            form.slaptazodis.data
+        ).decode("utf-8")
+        vartotojas = User(
+            name=form.vardas.data,
+            email=form.email.data,
+            password=koduotas_slaptazodis,
+        )
         db.session.add(vartotojas)
         db.session.commit()
-        flash('Sėkmingai prisiregistravote! Galite prisijungti', 'success')
-        return redirect(url_for('index'))
-    return render_template('registruotis.html', title='Register', form=form)
+        flash("Registration successful! You can login", "success")
+        return redirect(url_for("index"))
+    return render_template("registruotis.html", title="Register", form=form)
 
-@app.route("/prisijungti", methods=['GET', 'POST'])
+
+@app.route("/login", methods=["GET", "POST"])
 def prisijungti():
     if current_user.is_authenticated:
-        return redirect(url_for('index'))
+        return redirect(url_for("index"))
     form = forms.PrisijungimoForma()
     if form.validate_on_submit():
-        user = Vartotojas.query.filter_by(el_pastas=form.el_pastas.data).first()
-        if user and bcrypt.check_password_hash(user.slaptazodis, form.slaptazodis.data):
+        user = User.query.filter_by(email=form.el_pastas.data).first()
+        if user and bcrypt.check_password_hash(user.password, form.slaptazodis.data):
             login_user(user, remember=form.prisiminti.data)
-            next_page = request.args.get('next')
-            return redirect(next_page) if next_page else redirect(url_for('index'))
+            next_page = request.args.get("next")
+            return redirect(next_page) if next_page else redirect(url_for("index"))
         else:
-            flash('Prisijungti nepavyko. Patikrinkite el. paštą ir slaptažodį', 'danger')
-    return render_template('prisijungti.html', title='Prisijungti', form=form)
+            flash(
+                "Login failed. Please check email and password", "danger"
+            )
+    return render_template("prisijungti.html", title="Prisijungti", form=form)
 
-@app.route("/atsijungti")
+
+@app.route("/logout")
 def atsijungti():
     logout_user()
-    return redirect(url_for('index'))
-
-# @app.route("/irasai")
-# @login_required
-# def irasai():
-#     return render_template('irasai.html', title='Įrašai')
-
-# @app.route("/admin")
-# @login_required
-# def admin():
-#     return redirect(url_for(admin))
+    session.clear()
+    return redirect(url_for("index"))
 
 
-@app.route("/irasai")
-@login_required
-def records():
-    db.create_all()
-    page = request.args.get('page', 1, type=int)
-    visi_irasai = Irasas.query.filter_by(vartotojas_id=current_user.id).order_by(Irasas.data.desc()).paginate(page=page, per_page=2)
-    return render_template("irasai.html", visi_irasai=visi_irasai, datetime=datetime)
+@app.route("/game", methods=["GET", "POST"])
+def hangman_game():
+    hangman_data = session.get("hangman")
+    
+    if request.method == "GET" or hangman_data is None:
+        hangman = Hangman()  
+        session["hangman"] = hangman.to_dict()
+        return render_template("game.html", hangman=hangman)
+   
+    elif request.method == "POST":
+        guess = request.form.get("guess")  
+        hangman = Hangman.from_dict(hangman_data)
+        
+        if hangman.validate_input(guess):
+            flash("You should guess only one letter or entire word!", "warning")
 
-
-@app.route("/naujas_irasas", methods=["GET", "POST"])
-def new_record():
-    db.create_all()
-    forma = forms.IrasasForm()
-    if forma.validate_on_submit():
-        naujas_irasas = Irasas(pajamos=forma.pajamos.data, suma=forma.suma.data, vartotojas_id=current_user.id)
-        db.session.add(naujas_irasas)
-        db.session.commit()
-        flash(f"Įrašas sukurtas", 'success')
-        return redirect(url_for('records'))
-    return render_template("prideti_irasa.html", form=forma)
-
-
-@app.route("/delete/<int:id>")
-def delete(id):
-    irasas = Irasas.query.get(id)
-    db.session.delete(irasas)
-    db.session.commit()
-    return redirect(url_for('records'))
-
-@app.route("/update/<int:id>", methods=['GET', 'POST'])
-def update(id):
-    forma = forms.IrasasForm()
-    irasas = Irasas.query.get(id)
-    if forma.validate_on_submit():
-        irasas.pajamos = forma.pajamos.data
-        irasas.suma = forma.suma.data
-        db.session.commit()
-        return redirect(url_for('records'))
-    return render_template("update.html", form=forma, irasas=irasas)
-
-@app.route("/balansas")
-def balance():
-    try:
-        visi_irasai = Irasas.query.filter_by(vartotojas_id=current_user.id)
-    except:
-        visi_irasai = []
-    balansas = 0
-    for irasas in visi_irasai:
-        if irasas.pajamos:
-            balansas += irasas.suma
+        if hangman.is_already_checked(guess):
+            flash("You already guessed that letter!", "warning")
         else:
-            balansas -= irasas.suma
-    return render_template("balansas.html", balansas=balansas)
+            if hangman.check_guess(guess):
+                flash("Correct!", "success")
+            else:
+                flash("Incorrect!", "danger")
 
-# @app.route("/paskyra")
-# @login_required
-# def account():
-#     return render_template('paskyra.html', title='Paskyra')
+        
+        if hangman.incorrect_guesses >= hangman.max_mistakes:
+            flash(f"You have reached the maximum number of mistakes. Game over! The word was '{hangman.word_to_guess}'.", "danger")
+            session.pop("hangman")
+            return render_template("game.html", hangman=hangman)
+        if set(hangman.word_to_guess).issubset(set(hangman.guessed_letters)):
+            flash(f"Congratulations! You guessed the word correctly! The word was '{hangman.word_to_guess}'.", "success")
+            session.pop("hangman")
+            return render_template("game.html", hangman=hangman)
+        elif hangman.max_guesses == 0:
+            flash("You have used all your guesses. Game over!", "danger")
+            session.pop("hangman")
+            return render_template("game.html", hangman=hangman)
+   
+        session["hangman"] = hangman.to_dict()
 
-def save_picture(form_picture):
-    random_hex = secrets.token_hex(8)
-    _, f_ext = os.path.splitext(form_picture.filename)
-    picture_fn = random_hex + f_ext
-    picture_path = os.path.join(app.root_path, 'static/profilio_nuotraukos', picture_fn)
+        return render_template("game.html", hangman=hangman)
 
-    output_size = (125, 125)
-    i = Image.open(form_picture)
-    i.thumbnail(output_size)
-    i.save(picture_path)
 
-    return picture_fn
+@app.route("/gamestatistic")
+@login_required
+def game_statistic():
+    user_email = current_user.email
+    
+    today = datetime.now().date()
 
-@app.route("/paskyra", methods=['GET', 'POST'])
+    today_statistics = database.collection.find({"user_email": user_email,"timestamp": {"$gte": datetime.combine(today, datetime.min.time())}})
+
+    previous_days_statistics = database.collection.find({"user_email": user_email,"timestamp": {"$lt": datetime.combine(today, datetime.min.time())}})
+
+    today_statistics_list = list(today_statistics)
+    previous_days_statistics_list = list(previous_days_statistics)
+
+    return render_template("statistic.html", today_statistics=today_statistics_list, previous_days_statistics=previous_days_statistics_list, show_popup= True, datetime=datetime)
+
+
+
+@app.route("/account", methods=["GET", "POST"])
 @login_required
 def paskyra():
     form = forms.PaskyrosAtnaujinimoForma()
     if form.validate_on_submit():
-        if form.nuotrauka.data:
-            nuotrauka = save_picture(form.nuotrauka.data)
-            current_user.nuotrauka = nuotrauka
         current_user.vardas = form.vardas.data
         current_user.el_pastas = form.el_pastas.data
         db.session.commit()
-        flash('Tavo paskyra atnaujinta!', 'success')
-        return redirect(url_for('paskyra'))
-    elif request.method == 'GET':
-        form.vardas.data = current_user.vardas
-        form.el_pastas.data = current_user.el_pastas
-    nuotrauka = url_for('static', filename='profilio_nuotraukos/' + current_user.nuotrauka)
-    return render_template('paskyra.html', title='Account', form=form, nuotrauka=nuotrauka)
+        flash("Your account has been updated!", "success")
+        return redirect(url_for("paskyra"))
+    elif request.method == "GET":
+        form.vardas.data = current_user.name
+        form.el_pastas.data = current_user.email
+    return render_template("paskyra.html", title="Account", form=form)
 
+
+
+@app.route("/reset_password", methods=["GET", "POST"])
+def reset_request():
+    if current_user.is_authenticated:
+        return redirect(url_for("home"))
+    form = forms.UzklausosAtnaujinimoForma()
+    if form.validate_on_submit():
+        user = User.query.filter_by(email=form.el_pastas.data).first()
+        send_reset_email(user)
+        flash(
+            "Jums išsiųstas el. laiškas su slaptažodžio atnaujinimo instrukcijomis.",
+            "info",
+        )
+        return redirect(url_for("prisijungti"))
+    return render_template("reset_request.html", title="Reset Password", form=form)
 
 def send_reset_email(user):
     token = user.get_reset_token()
-    msg = Message('Slaptažodžio atnaujinimo užklausa',
-                  sender='el@pastas.lt',
-                  recipients=[user.el_pastas])
-    msg.body = f'''Norėdami atnaujinti slaptažodį, paspauskite nuorodą:
+    msg = Message(
+        "Slaptažodžio atnaujinimo užklausa",
+        sender="testflask11@gmail.com",
+        recipients=[user.email],
+    )
+    msg.body = f"""Norėdami atnaujinti slaptažodį, paspauskite nuorodą:
     {url_for('reset_token', token=token, _external=True)}
     Jei jūs nedarėte šios užklausos, nieko nedarykite ir slaptažodis nebus pakeistas.
-    '''
+    """
     mail.send(msg)
 
 
-
-@app.route("/reset_password", methods=['GET', 'POST'])
-def reset_request():
-    if current_user.is_authenticated:
-        return redirect(url_for('home'))
-    form = forms.UzklausosAtnaujinimoForma()
-    if form.validate_on_submit():
-        user = Vartotojas.query.filter_by(el_pastas=form.el_pastas.data).first()
-        send_reset_email(user)
-        flash('Jums išsiųstas el. laiškas su slaptažodžio atnaujinimo instrukcijomis.', 'info')
-        return redirect(url_for('prisijungti'))
-    return render_template('reset_request.html', title='Reset Password', form=form)
-
-@app.route("/reset_password/<token>", methods=['GET', 'POST'])
+@app.route("/reset_password/<token>", methods=["GET", "POST"])
 def reset_token(token):
     if current_user.is_authenticated:
-        return redirect(url_for('home'))
-    user = Vartotojas.verify_reset_token(token)
+        return redirect(url_for("home"))
+    user = User.verify_reset_token(token)
     if user is None:
-        flash('Užklausa netinkama arba pasibaigusio galiojimo', 'warning')
-        return redirect(url_for('reset_request'))
+        flash("Užklausa netinkama arba pasibaigusio galiojimo", "warning")
+        return redirect(url_for("reset_request"))
     form = forms.SlaptazodzioAtnaujinimoForma()
     if form.validate_on_submit():
-        hashed_password = bcrypt.generate_password_hash(form.slaptazodis.data).decode('utf-8')
+        hashed_password = bcrypt.generate_password_hash(form.slaptazodis.data).decode(
+            "utf-8"
+        )
         user.slaptazodis = hashed_password
         db.session.commit()
-        flash('Tavo slaptažodis buvo atnaujintas! Gali prisijungti', 'success')
-        return redirect(url_for('prisijungti'))
-    return render_template('reset_token.html', title='Reset Password', form=form)
+        flash("Tavo slaptažodis buvo atnaujintas! Gali prisijungti", "success")
+        return redirect(url_for("prisijungti"))
+    return render_template("reset_token.html", title="Reset Password", form=form)
 
 
 @app.errorhandler(404)
 def klaida_404(klaida):
     return render_template("404.html"), 404
 
+
 @app.errorhandler(403)
 def klaida_403(klaida):
     return render_template("403.html"), 403
+
 
 @app.errorhandler(500)
 def klaida_500(klaida):
