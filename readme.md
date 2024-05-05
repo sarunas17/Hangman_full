@@ -26,11 +26,19 @@ pip install -r requirements.txt
 docker run -d -p 27017:27017 --name hangman-mongo mongo:latest
 ```
 # Usage
-1. Run the Hangman game:
+1. Navigate to game sounds directory:
+```bash
+hangman/static/sounds
+```
+2. Add the sounds to the server:
+```bash
+python -m http.server 8001
+```
+3. Run the Hangman game:
 ```bash
 python run.py
 ```
-2. Follow the prompts to guess letters and try to uncover the hidden word.
-3. You have a limited number of attempts to guess the word before the hangman is complete!
+4. Follow the prompts to guess letters and try to uncover the hidden word.
+5. You have a limited number of attempts to guess the word before the hangman is complete!
 
 GOOD LUCK!
