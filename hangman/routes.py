@@ -1,4 +1,5 @@
 import datetime
+import logging
 import secrets
 from PIL import Image
 import os
@@ -14,6 +15,12 @@ from hangman.models import User
 from hangman.gamelogic import Hangman
 from hangman.mongo_file import database, MongoCRUD
 
+logging.basicConfig(level=logging.INFO, filename='hangman_log.txt', format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', datefmt='%d/%m/%Y %H:%M:%S')
+console = logging.StreamHandler()
+console.setLevel(logging.INFO)
+formatter = logging.Formatter('%(levelname)s - %(message)s')
+console.setFormatter(formatter)
+logging.getLogger('').addHandler(console)
 
 @app.route("/")
 def index():
@@ -73,16 +80,23 @@ def atsijungti():
 def hangman_game():
     hangman_data = session.get("hangman")
     
+   
+    
     if request.method == "GET" or hangman_data is None:
-        hangman = Hangman()  
+        hangman = Hangman()
+        hangman.start_game()  
         session["hangman"] = hangman.to_dict()
+        logging.info("New game started")
+        logging.info("Topic: %s", hangman.topic)
+        logging.info("Word to guess: %s", hangman.word_to_guess)
         return render_template("game.html", hangman=hangman)
+
    
     elif request.method == "POST":
-        guess = request.form.get("guess")  
-        hangman = Hangman.from_dict(hangman_data)
-        
-        if hangman.validate_input(guess):
+        guess = request.form.get("guess")
+        hangman = Hangman.from_dict(hangman_data)       
+
+        if not hangman.input_is_valid(guess):
             flash("You should guess only one letter or entire word!", "warning")
 
         if hangman.is_already_checked(guess):
@@ -94,22 +108,18 @@ def hangman_game():
                 flash("Incorrect!", "danger")
 
         
-        if hangman.incorrect_guesses >= hangman.max_mistakes:
-            flash(f"You have reached the maximum number of mistakes. Game over! The word was '{hangman.word_to_guess}'.", "danger")
-            session.pop("hangman")
-            return render_template("game.html", hangman=hangman)
-        if set(hangman.word_to_guess).issubset(set(hangman.guessed_letters)):
-            flash(f"Congratulations! You guessed the word correctly! The word was '{hangman.word_to_guess}'.", "success")
-            session.pop("hangman")
-            return render_template("game.html", hangman=hangman)
-        elif hangman.max_guesses == 0:
-            flash("You have used all your guesses. Game over!", "danger")
-            session.pop("hangman")
-            return render_template("game.html", hangman=hangman)
+        if hangman.is_game_over():
+            if current_user.is_authenticated and hangman.word_guessed_correctly():
+                document = {"user_email": current_user.email, "mistakes_made": hangman.incorrect_guesses, "guesses_made": 10 - hangman.max_guesses, "guessed_letters": hangman.guessed_letters, "word_to_guess": hangman.word_to_guess, "status": "win", "timestamp": datetime.now()}
+                database.insert_one_document(document)
+            elif current_user.is_authenticated:
+                document = {"user_email": current_user.email, "mistakes_made": hangman.incorrect_guesses, "guesses_made": 10 - hangman.max_guesses, "guessed_letters": hangman.guessed_letters, "word_to_guess": hangman.word_to_guess, "status": "lost", "timestamp": datetime.now()}
+                database.insert_one_document(document)
+
    
         session["hangman"] = hangman.to_dict()
 
-        return render_template("game.html", hangman=hangman)
+        return render_template("game.html", hangman=hangman, guess=guess)
 
 
 @app.route("/gamestatistic")
@@ -128,6 +138,24 @@ def game_statistic():
 
     return render_template("statistic.html", today_statistics=today_statistics_list, previous_days_statistics=previous_days_statistics_list, show_popup= True, datetime=datetime)
 
+@app.route("/top10")
+def top10():
+    game_results = list(database.collection.find())
+
+    wins_count = {}
+    for result in game_results:
+        if result["status"] == "win":
+            player_email = result["user_email"]
+            if player_email in wins_count:
+                wins_count[player_email] += 1
+            else:
+                wins_count[player_email] = 1
+
+    sorted_players = sorted(wins_count.items(), key=lambda x: x[1], reverse=True)
+
+    top_10_players = sorted_players[:10]
+
+    return render_template("top10.html", top_10_players=top_10_players)
 
 
 @app.route("/account", methods=["GET", "POST"])

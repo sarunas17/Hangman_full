@@ -21,10 +21,10 @@
   </thead>
   <tbody>
     {% for statistic in today_statistics %}
-      <tr>
+      <tr style="{% if statistic.status == 'win' %} color: green; {% elif statistic.status == 'lost' %} color: red; {% endif %}">
         <td>{{ statistic.mistakes_made }}</td>
         <td>{{ statistic.guesses_made }}</td>
-        <td>{{ statistic.guessed_letters }}</td>
+        <td>{{ statistic.guessed_letters|map('upper')|join(', ') }}</td>
         <td>{{ statistic.word_to_guess }}</td>
         <td>{{ statistic.status }}</td>
         <td>{{ statistic.timestamp.strftime("%Y-%m-%d %H:%M:%S") }}</td>
@@ -53,10 +53,10 @@
   </thead>
   <tbody>
     {% for statistic in previous_days_statistics %}
-      <tr>
+      <tr style="{% if statistic.status == 'win' %} color: green; {% elif statistic.status == 'lost' %} color: red; {% endif %}">
         <td>{{ statistic.mistakes_made }}</td>
         <td>{{ statistic.guesses_made }}</td>
-        <td>{{ statistic.guessed_letters }}</td>
+        <td>{{ statistic.guessed_letters|map('upper')|join(', ') }}</td>
         <td>{{ statistic.word_to_guess }}</td>
         <td>{{ statistic.status }}</td>
         <td>{{ statistic.timestamp.strftime("%Y-%m-%d %H:%M:%S") }}</td>

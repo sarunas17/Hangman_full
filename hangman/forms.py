@@ -34,14 +34,8 @@ class IrasasForm(FlaskForm):
 class PaskyrosAtnaujinimoForma(FlaskForm):
     vardas = StringField('Name', [DataRequired()])
     el_pastas = StringField('Email', [DataRequired()])
-    # nuotrauka = FileField('Update profile picture', validators=[FileAllowed(['jpg', 'png'])])
     submit = SubmitField('Update')
 
-    # def tikrinti_varda(self, vardas):
-    #     if vardas.data != current_user.vardas:
-    #         vartotojas = User.query.filter_by(vardas=vardas.data).first()
-    #         if vartotojas:
-    #             raise ValidationError('Šis vardas panaudotas. Pasirinkite kitą.')
 
     def tikrinti_pasta(self, el_pastas):
         if el_pastas.data != current_user.el_pastas:

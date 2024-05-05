@@ -50,29 +50,6 @@ class MongoCRUD:
         except PyMongoError as err:
             print(f"An error occured: {err}")
 
-    def insert_many_documents(self, document: Dict) -> Union[str, None]:
-        try:
-            result = self.collection.insert_many(document)
-            return str(result.inserted_ids)
-        except PyMongoError as err:
-            print(f"An error occured: {err}")
-
-    def update_one_document(self, query: Dict, update: Dict) -> Union[int, None]:
-        try:
-            result = self.collection.update_one(query, {"$set": update})
-            return result.modified_count
-        except PyMongoError as err:
-            print(f"An error occured: {err}")
-
-    def update_many_documents(self, query: Dict, update: Dict) -> Union[int, None]:
-        try:
-            result = self.collection.update_many(query, {"$set": update})
-            return result.modified_count
-        except PyMongoError as err:
-            print(f"An error occured: {err}")
-
-
-
 
 database = MongoCRUD(
     host="localhost",

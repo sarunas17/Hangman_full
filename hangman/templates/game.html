@@ -11,7 +11,9 @@
     <title>Hangman</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
 
 
     <!-- Bootstrap core CSS -->
@@ -22,19 +24,40 @@
 </head>
 <style>
     h1 {
-            font-family: 'Pixelify Sans', sans-serif;
-        }
+        font-family: 'Pixelify Sans', sans-serif;
+    }
 
     .navbar-nav .nav-link {
         font-family: 'Silkscreen', sans-serif;
     }
-    
 
-   .btn-primary {
-    background-color: #0d0707;}
+    .flash-message {
+        padding: 10px;
+        margin: 10px auto;
+        border-radius: 5px;
+        font-weight: bold;
+        /* width: 1000px; */
+        /* height: 100px ;} */
+    }
+
+    .flash-message.danger {
+        color: red;
+        /* background-color: #dc3545;  */
+    }
+
+    .flash-message.success {
+        color: green;
+        /* background-color: #28a745; */
+    }
+
+
+    .btn-primary {
+        background-color: #0d0707;
+    }
 
     .btn-primary:hover {
-    background-color: #11e711;}
+        background-color: #11e711;
+    }
 
     body {
         background-image: url('{{url_for('static', filename='hangmangame.jpg')}}');
@@ -116,7 +139,7 @@
         {% block content %}
         {% endblock %}
     </div>
-    
+
 
 
     <!-- Bootstrap core JavaScript -->
@@ -129,30 +152,64 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-<body>
-    {% if not current_user.is_authenticated %}
-        <p style="display: inline; font-size: smaller;">Do you want to track your game statistics?</p> 
-        <a class="nav-link" style="display: inline; font-size: smaller;" href="/signup">Sign up!</a>
+    
+    {% if request.method == 'POST' %}
+        
+        
+        {% if guess in hangman.word_to_guess %}
+            <audio autoplay src="http://localhost:8001/bell.mp3" preload="auto"></audio>
+        {% elif not guess in hangman.word_to_guess %}
+            <audio autoplay src="http://localhost:8001/fail.wav" preload="auto"></audio>
+        {% endif %}
     {% endif %}
-    <h1>HANGMAN game</h1>
-    <img src="/static/hangman_{{ hangman.incorrect_guesses }}.png" alt="Hangman Image">
-
-    <p>Word to guess from {{ hangman.display_topic() }} topic: {{ hangman.display_word() }}</p>
-    <p>Guesses left: {{ hangman.max_guesses }}</p>
-    <p>Mistakes left: {{ hangman.max_mistakes - hangman.incorrect_guesses }}</p>
-    <p>Already guessed letters: {{ hangman.display_guessed_letters() }}</p>
-
-    {% if hangman.is_game_over() %}
-    <a href="/game" class="btn btn-primary btn-lg custom-button"><h1>Play again!</h1></a>
-{% else %}
-    <form method="POST" action="/game">
-        <label for="guess">Guess a letter or entire word:</label>
-        <input type="text" id="guess" name="guess">
-        <button type="submit">Submit</button>
-    </form>
-{% endif %}
+    
+    
 
 
-</body>
+    {% if hangman.incorrect_guesses >= hangman.max_mistakes %}
+        <div class="flash-message danger">
+            <p>You have reached the maximum number of mistakes. Game over! The word was '{{ hangman.word_to_guess }}'.</p>
+        </div>
+        <audio autoplay src="http://localhost:8001/wasted.mp3" preload="auto"></audio>
+    {% elif hangman.word_guessed_correctly() %}
+        <div class="flash-message success">
+            <p>Congratulations! You guessed the word correctly! The word was '{{ hangman.word_to_guess }}'.</p>
+        </div>
+        <audio autoplay src="http://localhost:8001/genius.mp3" preload="auto"></audio>
+    {% elif hangman.max_guesses == 0 %}
+        <div class="flash-message danger">
+            <p>You have used all your guesses. Game over! The word was '{{ hangman.word_to_guess }}'</p>
+        </div>
+        <audio autoplay src="http://localhost:8001/wasted.mp3" preload="auto"></audio>
+    {% endif %}
+
+
+    <body>
+        {% if not current_user.is_authenticated %}
+        <p style="display: inline; font-size: smaller;">Do you want to track your game statistics?</p>
+        <a class="nav-link" style="display: inline; font-size: smaller;" href="/signup">Sign up!</a>
+        {% endif %}
+        <h1>HANGMAN game</h1>
+        <img src="/static/hangman_{{ hangman.incorrect_guesses }}.png" alt="Hangman Image">
+
+        <p>Word to guess from {{ hangman.display_topic() }} topic: {{ hangman.display_word() }}</p>
+        <p>Guesses left: {{ hangman.max_guesses }}</p>
+        <p>Mistakes left: {{ hangman.max_mistakes - hangman.incorrect_guesses }}</p>
+        <p>Already guessed letters: {{ hangman.display_guessed_letters() }}</p>
+
+        {% if hangman.is_game_over() %}
+        <a href="/game" class="btn btn-primary btn-lg custom-button">
+            <h1>Play again!</h1>
+        </a>
+        {% else %}
+        <form method="POST" action="/game">
+            <label for="guess">Guess a letter or entire word:</label>
+            <input type="text" id="guess" name="guess">
+            <button type="submit">Submit</button>
+        </form>
+        {% endif %}
+
+
+    </body>
 
 </html>
