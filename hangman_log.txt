@@ -5783,3 +5783,848 @@
 05/05/2024 01:27:55 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 01:27:55] "GET / HTTP/1.1" 200 -
 05/05/2024 01:27:55 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 01:27:55] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
 05/05/2024 01:27:55 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 01:27:55] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:56:24 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.0.106:8000
+05/05/2024 16:56:24 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+05/05/2024 16:56:24 - werkzeug - INFO -  * Restarting with stat
+05/05/2024 16:56:25 - werkzeug - WARNING -  * Debugger is active!
+05/05/2024 16:56:25 - werkzeug - INFO -  * Debugger PIN: 423-054-015
+05/05/2024 16:56:26 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:26] "GET / HTTP/1.1" 200 -
+05/05/2024 16:56:26 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:26] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+05/05/2024 16:56:26 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:26] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:56:26 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:56:27 - root - INFO - New game started
+05/05/2024 16:56:27 - root - INFO - Topic: food
+05/05/2024 16:56:27 - root - INFO - Word to guess: chocolate
+05/05/2024 16:56:27 - root - INFO - Displayed word: _ _ _ _ _ _ _ _ _
+05/05/2024 16:56:27 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:27] "GET /game HTTP/1.1" 200 -
+05/05/2024 16:56:27 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:27] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+05/05/2024 16:56:27 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:27] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:56:29 - root - INFO - Incorrect guess: d
+05/05/2024 16:56:29 - root - INFO - Displayed word: _ _ _ _ _ _ _ _ _
+05/05/2024 16:56:29 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:29] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:56:29 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:29] "[36mGET /static/hangman_1.png HTTP/1.1[0m" 304 -
+05/05/2024 16:56:29 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:29] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:56:29 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:56:31 - root - INFO - Incorrect guess: f
+05/05/2024 16:56:31 - root - INFO - Displayed word: _ _ _ _ _ _ _ _ _
+05/05/2024 16:56:31 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:31] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:56:31 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:31] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:56:31 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:31] "[36mGET /static/hangman_2.png HTTP/1.1[0m" 304 -
+05/05/2024 16:56:31 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:56:34 - root - INFO - Incorrect guess: g
+05/05/2024 16:56:34 - root - INFO - Displayed word: _ _ _ _ _ _ _ _ _
+05/05/2024 16:56:34 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:34] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:56:34 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:34] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:56:34 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:56:34 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:34] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+05/05/2024 16:56:36 - root - INFO - Correct guess: c
+05/05/2024 16:56:36 - root - INFO - Displayed word: C _ _ C _ _ _ _ _
+05/05/2024 16:56:36 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:36] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:56:36 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:36] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+05/05/2024 16:56:36 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:36] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:56:36 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:56:38 - root - INFO - Correct guess: h
+05/05/2024 16:56:38 - root - INFO - Displayed word: C H _ C _ _ _ _ _
+05/05/2024 16:56:38 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:38] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:56:38 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:38] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+05/05/2024 16:56:38 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:38] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:56:38 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:56:41 - root - INFO - Correct guess: o
+05/05/2024 16:56:41 - root - INFO - Displayed word: C H O C O _ _ _ _
+05/05/2024 16:56:41 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:41] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:56:41 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:41] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+05/05/2024 16:56:41 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:41] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:56:41 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:56:49 - root - INFO - Correct guess: l
+05/05/2024 16:56:49 - root - INFO - Displayed word: C H O C O L _ _ _
+05/05/2024 16:56:49 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:49] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:56:49 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:49] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:56:49 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:49] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+05/05/2024 16:56:49 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:56:51 - root - INFO - Correct guess: a
+05/05/2024 16:56:51 - root - INFO - Displayed word: C H O C O L A _ _
+05/05/2024 16:56:51 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:51] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:56:51 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:51] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+05/05/2024 16:56:51 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:51] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:56:51 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:56:53 - root - INFO - Correct guess: t
+05/05/2024 16:56:53 - root - INFO - Displayed word: C H O C O L A T _
+05/05/2024 16:56:53 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:53] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:56:53 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:53] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+05/05/2024 16:56:53 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:53] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:56:53 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:56:55 - root - INFO - Correct guess: e
+05/05/2024 16:56:55 - root - INFO - Congratulations! You guessed the word correctly!
+05/05/2024 16:56:55 - root - INFO - Displayed word: C H O C O L A T E
+05/05/2024 16:56:55 - root - INFO - Congratulations! You guessed the word correctly!
+05/05/2024 16:56:55 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:55] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:56:55 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:55] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+05/05/2024 16:56:55 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:55] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:56:55 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:56:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:57:06 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:06] "GET /login HTTP/1.1" 200 -
+05/05/2024 16:57:06 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:06] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+05/05/2024 16:57:06 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:06] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:57:14 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:14] "[32mPOST /login HTTP/1.1[0m" 302 -
+05/05/2024 16:57:14 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:14] "GET / HTTP/1.1" 200 -
+05/05/2024 16:57:14 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:14] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+05/05/2024 16:57:14 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:14] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:57:16 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:16] "GET /top10 HTTP/1.1" 200 -
+05/05/2024 16:57:16 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:16] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+05/05/2024 16:57:16 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:16] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:57:18 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:18] "GET /account HTTP/1.1" 200 -
+05/05/2024 16:57:18 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:18] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+05/05/2024 16:57:18 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:18] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:57:19 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:19] "GET /gamestatistic HTTP/1.1" 200 -
+05/05/2024 16:57:19 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:19] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:57:31 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:31] "GET / HTTP/1.1" 200 -
+05/05/2024 16:57:31 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:31] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+05/05/2024 16:57:31 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:31] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:57:32 - root - INFO - New game started
+05/05/2024 16:57:32 - root - INFO - Topic: sport
+05/05/2024 16:57:32 - root - INFO - Word to guess: tennis
+05/05/2024 16:57:32 - root - INFO - Displayed word: _ _ _ _ _ _
+05/05/2024 16:57:32 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:32] "GET /game HTTP/1.1" 200 -
+05/05/2024 16:57:32 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:32] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+05/05/2024 16:57:32 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:32] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:57:34 - root - INFO - Incorrect guess: k
+05/05/2024 16:57:34 - root - INFO - Displayed word: _ _ _ _ _ _
+05/05/2024 16:57:34 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:34] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:57:34 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:34] "[36mGET /static/hangman_1.png HTTP/1.1[0m" 304 -
+05/05/2024 16:57:34 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:34] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:57:35 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:57:38 - root - INFO - Incorrect guess: g
+05/05/2024 16:57:38 - root - INFO - Displayed word: _ _ _ _ _ _
+05/05/2024 16:57:38 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:38] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:57:38 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:38] "[36mGET /static/hangman_2.png HTTP/1.1[0m" 304 -
+05/05/2024 16:57:38 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:38] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:57:38 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:57:40 - root - INFO - Incorrect guess: b
+05/05/2024 16:57:40 - root - INFO - Displayed word: _ _ _ _ _ _
+05/05/2024 16:57:40 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:40] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:57:40 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:40] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+05/05/2024 16:57:40 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:40] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:57:40 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:57:44 - root - INFO - Correct guess: s
+05/05/2024 16:57:44 - root - INFO - Displayed word: _ _ _ _ _ S
+05/05/2024 16:57:44 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:44] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:57:44 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:44] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+05/05/2024 16:57:44 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:44] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:57:44 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:57:50 - root - INFO - Incorrect guess: o
+05/05/2024 16:57:50 - root - INFO - Displayed word: _ _ _ _ _ S
+05/05/2024 16:57:50 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:50] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:57:50 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:50] "[36mGET /static/hangman_4.png HTTP/1.1[0m" 304 -
+05/05/2024 16:57:50 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:50] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:57:50 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:57:55 - root - INFO - Displayed word: _ _ _ _ _ S
+05/05/2024 16:57:55 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:55] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:57:55 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:55] "[36mGET /static/hangman_4.png HTTP/1.1[0m" 304 -
+05/05/2024 16:57:55 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:55] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:57:55 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:57:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:58:02 - root - INFO - Displayed word: _ _ _ _ _ S
+05/05/2024 16:58:02 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:02] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:58:02 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:02] "[36mGET /static/hangman_4.png HTTP/1.1[0m" 304 -
+05/05/2024 16:58:02 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:02] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:58:02 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:58:06 - root - INFO - Displayed word: _ _ _ _ _ S
+05/05/2024 16:58:06 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:06] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:58:06 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:06] "[36mGET /static/hangman_4.png HTTP/1.1[0m" 304 -
+05/05/2024 16:58:06 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:06] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:58:06 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:58:15 - root - INFO - Incorrect guess: a
+05/05/2024 16:58:15 - root - INFO - Displayed word: _ _ _ _ _ S
+05/05/2024 16:58:15 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:15] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:58:15 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:15] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:58:15 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:15] "[36mGET /static/hangman_5.png HTTP/1.1[0m" 304 -
+05/05/2024 16:58:15 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:58:23 - root - INFO - Incorrect guess: l
+05/05/2024 16:58:23 - root - INFO - You have reached the maximum number of mistakes. Game over!
+05/05/2024 16:58:23 - root - INFO - Displayed word: _ _ _ _ _ S
+05/05/2024 16:58:23 - root - INFO - You have reached the maximum number of mistakes. Game over!
+05/05/2024 16:58:23 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:23] "POST /game HTTP/1.1" 200 -
+05/05/2024 16:58:23 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:23] "[36mGET /static/hangman_6.png HTTP/1.1[0m" 304 -
+05/05/2024 16:58:23 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:23] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:58:23 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+05/05/2024 16:58:36 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:36] "GET /account HTTP/1.1" 200 -
+05/05/2024 16:58:36 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:36] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+05/05/2024 16:58:36 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:36] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:58:37 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:37] "GET /gamestatistic HTTP/1.1" 200 -
+05/05/2024 16:58:37 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:37] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:58:59 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:59] "GET /top10 HTTP/1.1" 200 -
+05/05/2024 16:58:59 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:58:59] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+05/05/2024 16:59:00 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:59:00] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:59:01 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:59:01] "GET /gamestatistic HTTP/1.1" 200 -
+05/05/2024 16:59:02 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:59:02] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+05/05/2024 16:59:03 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:59:03] "[32mGET /logout HTTP/1.1[0m" 302 -
+05/05/2024 16:59:03 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:59:03] "GET / HTTP/1.1" 200 -
+05/05/2024 16:59:03 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:59:03] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+05/05/2024 16:59:03 - werkzeug - INFO - 127.0.0.1 - - [05/May/2024 16:59:03] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:43:15 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.0.106:8000
+06/05/2024 11:43:15 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+06/05/2024 11:43:15 - werkzeug - INFO -  * Restarting with stat
+06/05/2024 11:43:16 - werkzeug - WARNING -  * Debugger is active!
+06/05/2024 11:43:16 - werkzeug - INFO -  * Debugger PIN: 423-054-015
+06/05/2024 11:43:21 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:21] "GET / HTTP/1.1" 200 -
+06/05/2024 11:43:21 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:21] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 11:43:21 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:21] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:43:21 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 11:43:26 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:26] "GET /top10 HTTP/1.1" 200 -
+06/05/2024 11:43:26 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:26] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 11:43:26 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:26] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:43:28 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:28] "GET /login HTTP/1.1" 200 -
+06/05/2024 11:43:28 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:28] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 11:43:28 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:28] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:43:30 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:30] "GET /signup HTTP/1.1" 200 -
+06/05/2024 11:43:30 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:30] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 11:43:30 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:30] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:43:30 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:30] "GET /login HTTP/1.1" 200 -
+06/05/2024 11:43:30 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:30] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 11:43:30 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:30] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:43:36 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:36] "[32mPOST /login HTTP/1.1[0m" 302 -
+06/05/2024 11:43:36 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:36] "GET / HTTP/1.1" 200 -
+06/05/2024 11:43:36 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:36] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 11:43:36 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:36] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:43:39 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:39] "GET /account HTTP/1.1" 200 -
+06/05/2024 11:43:39 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:39] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 11:43:39 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:39] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:43:40 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:40] "GET /gamestatistic HTTP/1.1" 200 -
+06/05/2024 11:43:40 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:40] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:43:51 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:51] "GET /top10 HTTP/1.1" 200 -
+06/05/2024 11:43:51 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:51] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 11:43:51 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:51] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:43:54 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:54] "GET / HTTP/1.1" 200 -
+06/05/2024 11:43:54 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:54] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 11:43:54 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:54] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:43:57 - root - INFO - New game started
+06/05/2024 11:43:57 - root - INFO - Topic: sport
+06/05/2024 11:43:57 - root - INFO - Word to guess: boxing
+06/05/2024 11:43:57 - root - INFO - Displayed word: _ _ _ _ _ _
+06/05/2024 11:43:57 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:57] "GET /game HTTP/1.1" 200 -
+06/05/2024 11:43:57 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:57] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 11:43:57 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:43:57] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:44:24 - root - INFO - Incorrect guess: a
+06/05/2024 11:44:24 - root - INFO - Displayed word: _ _ _ _ _ _
+06/05/2024 11:44:24 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:24] "POST /game HTTP/1.1" 200 -
+06/05/2024 11:44:24 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:24] "[36mGET /static/hangman_1.png HTTP/1.1[0m" 304 -
+06/05/2024 11:44:24 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:24] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:44:25 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 11:44:27 - root - INFO - Incorrect guess: s
+06/05/2024 11:44:27 - root - INFO - Displayed word: _ _ _ _ _ _
+06/05/2024 11:44:27 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:27] "POST /game HTTP/1.1" 200 -
+06/05/2024 11:44:27 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:27] "[36mGET /static/hangman_2.png HTTP/1.1[0m" 304 -
+06/05/2024 11:44:27 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:27] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:44:27 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 11:44:29 - root - INFO - Incorrect guess: d
+06/05/2024 11:44:29 - root - INFO - Displayed word: _ _ _ _ _ _
+06/05/2024 11:44:29 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:29] "POST /game HTTP/1.1" 200 -
+06/05/2024 11:44:29 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:29] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+06/05/2024 11:44:29 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:29] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:44:29 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 11:44:31 - root - INFO - Correct guess: g
+06/05/2024 11:44:31 - root - INFO - Displayed word: _ _ _ _ _ G
+06/05/2024 11:44:31 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:31] "POST /game HTTP/1.1" 200 -
+06/05/2024 11:44:31 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:31] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+06/05/2024 11:44:31 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:31] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:44:31 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 11:44:34 - root - INFO - Correct guess: b
+06/05/2024 11:44:34 - root - INFO - Displayed word: B _ _ _ _ G
+06/05/2024 11:44:34 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:34] "POST /game HTTP/1.1" 200 -
+06/05/2024 11:44:34 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:34] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+06/05/2024 11:44:34 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:34] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:44:34 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 11:44:39 - root - INFO - Displayed word: B _ _ _ _ G
+06/05/2024 11:44:39 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:39] "POST /game HTTP/1.1" 200 -
+06/05/2024 11:44:39 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:39] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+06/05/2024 11:44:39 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:39] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:44:39 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 11:44:45 - root - INFO - Displayed word: B _ _ _ _ G
+06/05/2024 11:44:45 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:45] "POST /game HTTP/1.1" 200 -
+06/05/2024 11:44:45 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:45] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+06/05/2024 11:44:45 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:45] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:44:45 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 11:44:50 - root - INFO - Displayed word: B _ _ _ _ G
+06/05/2024 11:44:50 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:50] "POST /game HTTP/1.1" 200 -
+06/05/2024 11:44:51 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:51] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+06/05/2024 11:44:51 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:51] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:44:51 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:44:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 11:45:02 - root - INFO - Displayed word: B _ _ _ _ G
+06/05/2024 11:45:02 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:02] "POST /game HTTP/1.1" 200 -
+06/05/2024 11:45:02 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:02] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+06/05/2024 11:45:02 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:02] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:45:02 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 11:45:04 - root - INFO - Incorrect guess: f
+06/05/2024 11:45:04 - root - INFO - Displayed word: B _ _ _ _ G
+06/05/2024 11:45:04 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:04] "POST /game HTTP/1.1" 200 -
+06/05/2024 11:45:04 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:04] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:45:04 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:04] "[36mGET /static/hangman_4.png HTTP/1.1[0m" 304 -
+06/05/2024 11:45:04 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 11:45:08 - root - INFO - Displayed word: B _ _ _ _ G
+06/05/2024 11:45:08 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:08] "POST /game HTTP/1.1" 200 -
+06/05/2024 11:45:08 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:08] "[36mGET /static/hangman_4.png HTTP/1.1[0m" 304 -
+06/05/2024 11:45:08 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:08] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:45:08 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 11:45:11 - root - INFO - Incorrect guess: r
+06/05/2024 11:45:11 - root - INFO - Displayed word: B _ _ _ _ G
+06/05/2024 11:45:11 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:11] "POST /game HTTP/1.1" 200 -
+06/05/2024 11:45:11 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:11] "[36mGET /static/hangman_5.png HTTP/1.1[0m" 304 -
+06/05/2024 11:45:11 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:11] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:45:11 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 11:45:15 - root - INFO - Correct guess: o
+06/05/2024 11:45:15 - root - INFO - Displayed word: B O _ _ _ G
+06/05/2024 11:45:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:15] "POST /game HTTP/1.1" 200 -
+06/05/2024 11:45:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:15] "[36mGET /static/hangman_5.png HTTP/1.1[0m" 304 -
+06/05/2024 11:45:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:15] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:45:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 11:45:21 - root - INFO - Incorrect guess: t
+06/05/2024 11:45:21 - root - INFO - You have reached the maximum number of mistakes. Game over!
+06/05/2024 11:45:21 - root - INFO - Displayed word: B O _ _ _ G
+06/05/2024 11:45:21 - root - INFO - You have reached the maximum number of mistakes. Game over!
+06/05/2024 11:45:21 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:21] "POST /game HTTP/1.1" 200 -
+06/05/2024 11:45:21 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:21] "[36mGET /static/hangman_6.png HTTP/1.1[0m" 304 -
+06/05/2024 11:45:21 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:21] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:45:21 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 11:45:36 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:36] "GET /gamestatistic HTTP/1.1" 200 -
+06/05/2024 11:45:36 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:36] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 11:45:50 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:50] "[32mGET /logout HTTP/1.1[0m" 302 -
+06/05/2024 11:45:50 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:50] "GET / HTTP/1.1" 200 -
+06/05/2024 11:45:50 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:50] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 11:45:50 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 11:45:50] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 17:46:24 - root - INFO - New game started
+06/05/2024 17:46:24 - root - INFO - Topic: countries
+06/05/2024 17:46:24 - root - INFO - Word to guess: germany
+06/05/2024 17:46:24 - root - INFO - Displayed word: _ _ _ _ _ _ _
+06/05/2024 17:46:24 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:46:24] "GET /game HTTP/1.1" 200 -
+06/05/2024 17:46:24 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:46:24] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 17:46:24 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:46:24] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 17:46:25 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:46:25] "GET / HTTP/1.1" 200 -
+06/05/2024 17:46:25 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:46:25] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 17:46:25 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:46:25] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 17:46:27 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:46:27] "GET /top10 HTTP/1.1" 200 -
+06/05/2024 17:46:27 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:46:27] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 17:46:27 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:46:27] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 17:46:38 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:46:38] "GET / HTTP/1.1" 200 -
+06/05/2024 17:46:38 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:46:38] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 17:46:38 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:46:38] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 17:46:39 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:46:39] "GET /top10 HTTP/1.1" 200 -
+06/05/2024 17:46:39 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:46:39] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 17:46:39 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:46:39] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 17:46:42 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:46:42] "GET / HTTP/1.1" 200 -
+06/05/2024 17:46:42 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:46:42] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 17:46:42 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:46:42] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 17:47:52 - root - INFO - New game started
+06/05/2024 17:47:52 - root - INFO - Topic: sport
+06/05/2024 17:47:52 - root - INFO - Word to guess: football
+06/05/2024 17:47:52 - root - INFO - Displayed word: _ _ _ _ _ _ _ _
+06/05/2024 17:47:52 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:47:52] "GET /game HTTP/1.1" 200 -
+06/05/2024 17:47:52 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:47:52] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 17:47:52 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:47:52] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 17:47:55 - root - INFO - Correct guess: f
+06/05/2024 17:47:55 - root - INFO - Displayed word: F _ _ _ _ _ _ _
+06/05/2024 17:47:55 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:47:55] "POST /game HTTP/1.1" 200 -
+06/05/2024 17:47:55 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:47:55] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 17:47:55 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:47:55] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 17:47:56 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:47:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 17:48:02 - root - INFO - Correct guess: o
+06/05/2024 17:48:02 - root - INFO - Displayed word: F O O _ _ _ _ _
+06/05/2024 17:48:02 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:02] "POST /game HTTP/1.1" 200 -
+06/05/2024 17:48:02 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:02] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 17:48:02 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:02] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 17:48:02 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 17:48:05 - root - INFO - Correct guess: t
+06/05/2024 17:48:05 - root - INFO - Displayed word: F O O T _ _ _ _
+06/05/2024 17:48:05 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:05] "POST /game HTTP/1.1" 200 -
+06/05/2024 17:48:05 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:05] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 17:48:05 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:05] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 17:48:05 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 17:48:08 - root - INFO - Incorrect guess: y
+06/05/2024 17:48:08 - root - INFO - Displayed word: F O O T _ _ _ _
+06/05/2024 17:48:08 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:08] "POST /game HTTP/1.1" 200 -
+06/05/2024 17:48:08 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:08] "[36mGET /static/hangman_1.png HTTP/1.1[0m" 304 -
+06/05/2024 17:48:08 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:08] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 17:48:08 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 17:48:15 - root - INFO - Incorrect guess: i
+06/05/2024 17:48:15 - root - INFO - Displayed word: F O O T _ _ _ _
+06/05/2024 17:48:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:15] "POST /game HTTP/1.1" 200 -
+06/05/2024 17:48:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 17:48:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:15] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 17:48:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:15] "[36mGET /static/hangman_2.png HTTP/1.1[0m" 304 -
+06/05/2024 17:48:20 - root - INFO - Correct guess: b
+06/05/2024 17:48:20 - root - INFO - Displayed word: F O O T B _ _ _
+06/05/2024 17:48:20 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:20] "POST /game HTTP/1.1" 200 -
+06/05/2024 17:48:20 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:20] "[36mGET /static/hangman_2.png HTTP/1.1[0m" 304 -
+06/05/2024 17:48:20 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:20] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 17:48:20 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 17:48:22 - root - INFO - Correct guess: a
+06/05/2024 17:48:22 - root - INFO - Displayed word: F O O T B A _ _
+06/05/2024 17:48:22 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:22] "POST /game HTTP/1.1" 200 -
+06/05/2024 17:48:22 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:22] "[36mGET /static/hangman_2.png HTTP/1.1[0m" 304 -
+06/05/2024 17:48:22 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:22] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 17:48:22 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 17:48:24 - root - INFO - Correct guess: l
+06/05/2024 17:48:24 - root - INFO - Congratulations! You guessed the word correctly!
+06/05/2024 17:48:24 - root - INFO - Displayed word: F O O T B A L L
+06/05/2024 17:48:24 - root - INFO - Congratulations! You guessed the word correctly!
+06/05/2024 17:48:24 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:24] "POST /game HTTP/1.1" 200 -
+06/05/2024 17:48:24 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:24] "[36mGET /static/hangman_2.png HTTP/1.1[0m" 304 -
+06/05/2024 17:48:24 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:24] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 17:48:24 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 17:48:37 - root - INFO - New game started
+06/05/2024 17:48:37 - root - INFO - Topic: sport
+06/05/2024 17:48:37 - root - INFO - Word to guess: cricket
+06/05/2024 17:48:37 - root - INFO - Displayed word: _ _ _ _ _ _ _
+06/05/2024 17:48:37 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:37] "GET /game HTTP/1.1" 200 -
+06/05/2024 17:48:37 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:37] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 17:48:37 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:48:37] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 17:49:02 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:49:02] "GET / HTTP/1.1" 200 -
+06/05/2024 17:49:02 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:49:02] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 17:49:02 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 17:49:02] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 17:52:17 - werkzeug - INFO -  * Detected change in 'C:\\PYTHON\\FINAL_TASK_FULL\\hangman\\forms.py', reloading
+06/05/2024 17:52:18 - werkzeug - INFO -  * Restarting with stat
+06/05/2024 17:52:20 - werkzeug - WARNING -  * Debugger is active!
+06/05/2024 17:52:20 - werkzeug - INFO -  * Debugger PIN: 423-054-015
+06/05/2024 17:52:21 - werkzeug - INFO -  * Detected change in 'C:\\PYTHON\\FINAL_TASK_FULL\\hangman\\forms.py', reloading
+06/05/2024 17:52:21 - werkzeug - INFO -  * Restarting with stat
+06/05/2024 17:52:23 - werkzeug - WARNING -  * Debugger is active!
+06/05/2024 17:52:23 - werkzeug - INFO -  * Debugger PIN: 423-054-015
+06/05/2024 18:36:18 - root - INFO - New game started
+06/05/2024 18:36:18 - root - INFO - Topic: countries
+06/05/2024 18:36:18 - root - INFO - Word to guess: india
+06/05/2024 18:36:18 - root - INFO - Displayed word: _ _ _ _ _
+06/05/2024 18:36:18 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:36:18] "GET /game HTTP/1.1" 200 -
+06/05/2024 18:36:18 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:36:18] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 18:36:18 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:36:18] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:36:21 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:36:21] "GET /signup HTTP/1.1" 200 -
+06/05/2024 18:36:21 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:36:21] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 18:36:21 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:36:21] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:36:23 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:36:23] "GET /login HTTP/1.1" 200 -
+06/05/2024 18:36:23 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:36:23] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 18:36:23 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:36:23] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:36:28 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:36:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+06/05/2024 18:36:28 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:36:28] "GET / HTTP/1.1" 200 -
+06/05/2024 18:36:28 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:36:28] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 18:36:28 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:36:28] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:36:32 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:36:32] "GET /gamestatistic HTTP/1.1" 200 -
+06/05/2024 18:36:32 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:36:32] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:36:54 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:36:54] "GET /top10 HTTP/1.1" 200 -
+06/05/2024 18:36:54 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:36:54] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 18:36:54 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:36:54] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:37:11 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:37:11] "GET / HTTP/1.1" 200 -
+06/05/2024 18:37:11 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:37:11] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 18:37:11 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:37:11] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:37:11 - root - INFO - New game started
+06/05/2024 18:37:11 - root - INFO - Topic: countries
+06/05/2024 18:37:11 - root - INFO - Word to guess: france
+06/05/2024 18:37:11 - root - INFO - Displayed word: _ _ _ _ _ _
+06/05/2024 18:37:11 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:37:11] "GET /game HTTP/1.1" 200 -
+06/05/2024 18:37:11 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:37:11] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 18:37:11 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:37:11] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:37:19 - root - INFO - Correct guess: a
+06/05/2024 18:37:19 - root - INFO - Displayed word: _ _ A _ _ _
+06/05/2024 18:37:19 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:37:19] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:37:19 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:37:19] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 18:37:19 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:37:19] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:37:19 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:37:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:37:40 - root - INFO - Correct guess: f
+06/05/2024 18:37:40 - root - INFO - Displayed word: F _ A _ _ _
+06/05/2024 18:37:40 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:37:40] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:37:40 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:37:40] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 18:37:40 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:37:40] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:37:40 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:37:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:37:55 - root - INFO - Correctly guessed word: france
+06/05/2024 18:37:55 - root - INFO - Congratulations! You guessed the word correctly!
+06/05/2024 18:37:55 - root - INFO - Displayed word: F R A N C E
+06/05/2024 18:37:55 - root - INFO - Congratulations! You guessed the word correctly!
+06/05/2024 18:37:55 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:37:55] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:37:55 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:37:55] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 18:37:55 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:37:55] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:37:55 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:37:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:38:01 - root - INFO - New game started
+06/05/2024 18:38:01 - root - INFO - Topic: sport
+06/05/2024 18:38:01 - root - INFO - Word to guess: cricket
+06/05/2024 18:38:01 - root - INFO - Displayed word: _ _ _ _ _ _ _
+06/05/2024 18:38:01 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:01] "GET /game HTTP/1.1" 200 -
+06/05/2024 18:38:01 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:01] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 18:38:02 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:02] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:38:07 - root - INFO - Incorrect guess: q
+06/05/2024 18:38:07 - root - INFO - Displayed word: _ _ _ _ _ _ _
+06/05/2024 18:38:07 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:07] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:38:07 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:07] "[36mGET /static/hangman_1.png HTTP/1.1[0m" 304 -
+06/05/2024 18:38:07 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:07] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:38:07 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:38:08 - root - INFO - Incorrect guess: w
+06/05/2024 18:38:08 - root - INFO - Displayed word: _ _ _ _ _ _ _
+06/05/2024 18:38:08 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:08] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:38:08 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:08] "[36mGET /static/hangman_2.png HTTP/1.1[0m" 304 -
+06/05/2024 18:38:08 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:08] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:38:08 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:38:10 - root - INFO - Incorrect guess: x
+06/05/2024 18:38:10 - root - INFO - Displayed word: _ _ _ _ _ _ _
+06/05/2024 18:38:10 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:10] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:38:10 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:10] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+06/05/2024 18:38:10 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:10] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:38:10 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:38:13 - root - INFO - Incorrect guess: z
+06/05/2024 18:38:13 - root - INFO - Displayed word: _ _ _ _ _ _ _
+06/05/2024 18:38:13 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:13] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:38:13 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:13] "[36mGET /static/hangman_4.png HTTP/1.1[0m" 304 -
+06/05/2024 18:38:13 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:13] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:38:13 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:38:16 - root - INFO - Correct guess: c
+06/05/2024 18:38:16 - root - INFO - Displayed word: C _ _ C _ _ _
+06/05/2024 18:38:16 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:16] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:38:16 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:16] "[36mGET /static/hangman_4.png HTTP/1.1[0m" 304 -
+06/05/2024 18:38:16 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:16] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:38:16 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:38:19 - root - INFO - Incorrect guess: v
+06/05/2024 18:38:19 - root - INFO - Displayed word: C _ _ C _ _ _
+06/05/2024 18:38:19 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:19] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:38:19 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:19] "[36mGET /static/hangman_5.png HTTP/1.1[0m" 304 -
+06/05/2024 18:38:19 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:19] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:38:19 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:38:22 - root - INFO - Incorrect guess: h
+06/05/2024 18:38:22 - root - INFO - You have reached the maximum number of mistakes. Game over!
+06/05/2024 18:38:22 - root - INFO - Displayed word: C _ _ C _ _ _
+06/05/2024 18:38:22 - root - INFO - You have reached the maximum number of mistakes. Game over!
+06/05/2024 18:38:22 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:22] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:38:22 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:22] "[36mGET /static/hangman_6.png HTTP/1.1[0m" 304 -
+06/05/2024 18:38:22 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:22] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:38:22 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:38:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:39:52 - root - INFO - New game started
+06/05/2024 18:39:52 - root - INFO - Topic: countries
+06/05/2024 18:39:52 - root - INFO - Word to guess: lithuania
+06/05/2024 18:39:52 - root - INFO - Displayed word: _ _ _ _ _ _ _ _ _
+06/05/2024 18:39:52 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:39:52] "GET /game HTTP/1.1" 200 -
+06/05/2024 18:39:52 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:39:52] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 18:39:52 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:39:52] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:39:57 - root - INFO - Correct guess: a
+06/05/2024 18:39:57 - root - INFO - Displayed word: _ _ _ _ _ A _ _ A
+06/05/2024 18:39:57 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:39:57] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:39:57 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:39:57] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 18:39:57 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:39:57] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:39:57 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:39:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:40:01 - root - INFO - Incorrect guess: s
+06/05/2024 18:40:01 - root - INFO - Displayed word: _ _ _ _ _ A _ _ A
+06/05/2024 18:40:01 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:01] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:40:01 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:01] "[36mGET /static/hangman_1.png HTTP/1.1[0m" 304 -
+06/05/2024 18:40:01 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:01] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:40:01 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:40:23 - root - INFO - Displayed word: _ _ _ _ _ A _ _ A
+06/05/2024 18:40:23 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:23] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:40:23 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:23] "[36mGET /static/hangman_1.png HTTP/1.1[0m" 304 -
+06/05/2024 18:40:23 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:23] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:40:23 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:40:25 - root - INFO - Displayed word: _ _ _ _ _ A _ _ A
+06/05/2024 18:40:25 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:25] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:40:25 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:25] "[36mGET /static/hangman_1.png HTTP/1.1[0m" 304 -
+06/05/2024 18:40:25 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:25] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:40:25 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:40:28 - root - INFO - Incorrect guess: d
+06/05/2024 18:40:28 - root - INFO - Displayed word: _ _ _ _ _ A _ _ A
+06/05/2024 18:40:28 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:28] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:40:28 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:28] "[36mGET /static/hangman_2.png HTTP/1.1[0m" 304 -
+06/05/2024 18:40:28 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:28] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:40:28 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:40:33 - root - INFO - Displayed word: _ _ _ _ _ A _ _ A
+06/05/2024 18:40:33 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:33] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:40:33 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:33] "[36mGET /static/hangman_2.png HTTP/1.1[0m" 304 -
+06/05/2024 18:40:33 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:33] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:40:33 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:40:36 - root - INFO - Incorrect guess: f
+06/05/2024 18:40:36 - root - INFO - Displayed word: _ _ _ _ _ A _ _ A
+06/05/2024 18:40:36 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:36] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:40:36 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:36] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+06/05/2024 18:40:36 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:36] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:40:36 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:40:43 - root - INFO - Correct guess: l
+06/05/2024 18:40:43 - root - INFO - Displayed word: L _ _ _ _ A _ _ A
+06/05/2024 18:40:43 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:43] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:40:43 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:43] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+06/05/2024 18:40:43 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:43] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:40:43 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:40:48 - root - INFO - Correct guess: i
+06/05/2024 18:40:48 - root - INFO - Displayed word: L I _ _ _ A _ I A
+06/05/2024 18:40:48 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:48] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:40:48 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:48] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+06/05/2024 18:40:48 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:48] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:40:48 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:40:52 - root - INFO - Correctly guessed word: lithuania
+06/05/2024 18:40:52 - root - INFO - Congratulations! You guessed the word correctly!
+06/05/2024 18:40:52 - root - INFO - Displayed word: L I T H U A N I A
+06/05/2024 18:40:52 - root - INFO - Congratulations! You guessed the word correctly!
+06/05/2024 18:40:52 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:52] "POST /game HTTP/1.1" 200 -
+06/05/2024 18:40:52 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:52] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+06/05/2024 18:40:52 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:52] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:40:52 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:40:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 18:44:43 - root - INFO - New game started
+06/05/2024 18:44:43 - root - INFO - Topic: food
+06/05/2024 18:44:43 - root - INFO - Word to guess: chocolate
+06/05/2024 18:44:43 - root - INFO - Displayed word: _ _ _ _ _ _ _ _ _
+06/05/2024 18:44:43 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:44:43] "GET /game HTTP/1.1" 200 -
+06/05/2024 18:44:43 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:44:43] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 18:44:43 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 18:44:43] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 18:48:42 - werkzeug - INFO -  * Detected change in 'C:\\PYTHON\\FINAL_TASK_FULL\\hangman\\gamelogic.py', reloading
+06/05/2024 18:48:42 - werkzeug - INFO -  * Restarting with stat
+06/05/2024 18:48:44 - werkzeug - WARNING -  * Debugger is active!
+06/05/2024 18:48:44 - werkzeug - INFO -  * Debugger PIN: 423-054-015
+06/05/2024 18:48:46 - werkzeug - INFO -  * Detected change in 'C:\\PYTHON\\FINAL_TASK_FULL\\hangman\\gamelogic.py', reloading
+06/05/2024 18:48:47 - werkzeug - INFO -  * Restarting with stat
+06/05/2024 19:12:41 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.0.106:8000
+06/05/2024 19:12:41 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+06/05/2024 19:12:41 - werkzeug - INFO -  * Restarting with stat
+06/05/2024 19:12:42 - werkzeug - WARNING -  * Debugger is active!
+06/05/2024 19:12:42 - werkzeug - INFO -  * Debugger PIN: 423-054-015
+06/05/2024 19:12:44 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:12:44] "GET / HTTP/1.1" 200 -
+06/05/2024 19:12:44 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:12:44] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 19:12:44 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:12:44] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:12:47 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:12:47] "GET /gamestatistic HTTP/1.1" 200 -
+06/05/2024 19:12:47 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:12:47] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:13:12 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:13:12] "GET /account HTTP/1.1" 200 -
+06/05/2024 19:13:12 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:13:12] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 19:13:12 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:13:12] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:13:13 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:13:13] "GET /gamestatistic HTTP/1.1" 200 -
+06/05/2024 19:13:13 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:13:13] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:13:16 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:13:16] "GET / HTTP/1.1" 200 -
+06/05/2024 19:13:16 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:13:16] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 19:13:16 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:13:16] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:13:19 - root - INFO - New game started
+06/05/2024 19:13:19 - root - INFO - Topic: food
+06/05/2024 19:13:19 - root - INFO - Word to guess: pizza
+06/05/2024 19:13:19 - root - INFO - Displayed word: _ _ _ _ _
+06/05/2024 19:13:19 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:13:19] "GET /game HTTP/1.1" 200 -
+06/05/2024 19:13:19 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:13:19] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 19:13:19 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:13:19] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:14:10 - root - INFO - Correct guess: a
+06/05/2024 19:14:10 - root - INFO - Displayed word: _ _ _ _ A
+06/05/2024 19:14:10 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:10] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:14:10 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:10] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 19:14:10 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:10] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:14:10 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:14:15 - root - INFO - Incorrect guess: s
+06/05/2024 19:14:15 - root - INFO - Displayed word: _ _ _ _ A
+06/05/2024 19:14:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:15] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:14:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:15] "[36mGET /static/hangman_1.png HTTP/1.1[0m" 304 -
+06/05/2024 19:14:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:15] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:14:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:14:30 - root - INFO - Incorrect guess: e
+06/05/2024 19:14:30 - root - INFO - Displayed word: _ _ _ _ A
+06/05/2024 19:14:30 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:30] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:14:30 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:30] "[36mGET /static/hangman_2.png HTTP/1.1[0m" 304 -
+06/05/2024 19:14:30 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:30] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:14:30 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:14:43 - root - INFO - Incorrect guess: n
+06/05/2024 19:14:43 - root - INFO - Displayed word: _ _ _ _ A
+06/05/2024 19:14:43 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:43] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:14:43 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:43] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+06/05/2024 19:14:43 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:43] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:14:43 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:14:48 - root - INFO - Incorrect guess: g
+06/05/2024 19:14:48 - root - INFO - Displayed word: _ _ _ _ A
+06/05/2024 19:14:48 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:48] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:14:48 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:48] "[36mGET /static/hangman_4.png HTTP/1.1[0m" 304 -
+06/05/2024 19:14:48 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:48] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:14:48 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:14:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:16:20 - root - INFO - Correctly guessed word: pizza
+06/05/2024 19:16:20 - root - INFO - Congratulations! You guessed the word correctly!
+06/05/2024 19:16:20 - root - INFO - Displayed word: P I Z Z A
+06/05/2024 19:16:20 - root - INFO - Congratulations! You guessed the word correctly!
+06/05/2024 19:16:20 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:20] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:16:20 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:20] "[36mGET /static/hangman_4.png HTTP/1.1[0m" 304 -
+06/05/2024 19:16:20 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:20] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:16:20 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:16:28 - root - INFO - New game started
+06/05/2024 19:16:28 - root - INFO - Topic: sport
+06/05/2024 19:16:28 - root - INFO - Word to guess: swimming
+06/05/2024 19:16:28 - root - INFO - Displayed word: _ _ _ _ _ _ _ _
+06/05/2024 19:16:28 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:28] "GET /game HTTP/1.1" 200 -
+06/05/2024 19:16:28 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:28] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 19:16:28 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:28] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:16:37 - root - INFO - Incorrect guess: a
+06/05/2024 19:16:37 - root - INFO - Displayed word: _ _ _ _ _ _ _ _
+06/05/2024 19:16:37 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:37] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:16:37 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:37] "[36mGET /static/hangman_1.png HTTP/1.1[0m" 304 -
+06/05/2024 19:16:37 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:37] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:16:37 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:16:40 - root - INFO - Correct guess: s
+06/05/2024 19:16:40 - root - INFO - Displayed word: S _ _ _ _ _ _ _
+06/05/2024 19:16:40 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:40] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:16:40 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:40] "[36mGET /static/hangman_1.png HTTP/1.1[0m" 304 -
+06/05/2024 19:16:40 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:40] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:16:40 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:16:46 - root - INFO - Incorrect guess: c
+06/05/2024 19:16:46 - root - INFO - Displayed word: S _ _ _ _ _ _ _
+06/05/2024 19:16:46 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:46] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:16:46 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:46] "[36mGET /static/hangman_2.png HTTP/1.1[0m" 304 -
+06/05/2024 19:16:46 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:46] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:16:46 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:16:55 - root - INFO - Correct guess: n
+06/05/2024 19:16:55 - root - INFO - Displayed word: S _ _ _ _ _ N _
+06/05/2024 19:16:55 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:55] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:16:55 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:55] "[36mGET /static/hangman_2.png HTTP/1.1[0m" 304 -
+06/05/2024 19:16:55 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:55] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:16:55 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:16:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:17:03 - root - INFO - Incorrect guess: e
+06/05/2024 19:17:03 - root - INFO - Displayed word: S _ _ _ _ _ N _
+06/05/2024 19:17:03 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:17:03] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:17:03 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:17:03] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+06/05/2024 19:17:03 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:17:03] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:17:03 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:17:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:17:32 - root - INFO - Incorrect guess: k
+06/05/2024 19:17:32 - root - INFO - Displayed word: S _ _ _ _ _ N _
+06/05/2024 19:17:32 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:17:32] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:17:32 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:17:32] "[36mGET /static/hangman_4.png HTTP/1.1[0m" 304 -
+06/05/2024 19:17:32 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:17:32] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:17:32 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:17:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:17:47 - root - INFO - Correct guess: i
+06/05/2024 19:17:47 - root - INFO - Displayed word: S _ I _ _ I N _
+06/05/2024 19:17:47 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:17:47] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:17:47 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:17:47] "[36mGET /static/hangman_4.png HTTP/1.1[0m" 304 -
+06/05/2024 19:17:47 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:17:47] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:17:47 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:17:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:18:15 - root - INFO - Incorrect guess: o
+06/05/2024 19:18:15 - root - INFO - Displayed word: S _ I _ _ I N _
+06/05/2024 19:18:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:15] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:18:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:15] "[36mGET /static/hangman_5.png HTTP/1.1[0m" 304 -
+06/05/2024 19:18:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:15] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:18:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:18:28 - root - INFO - Incorrect guess: l
+06/05/2024 19:18:28 - root - INFO - You have reached the maximum number of mistakes. Game over!
+06/05/2024 19:18:28 - root - INFO - Displayed word: S _ I _ _ I N _
+06/05/2024 19:18:28 - root - INFO - You have reached the maximum number of mistakes. Game over!
+06/05/2024 19:18:28 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:28] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:18:28 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:28] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:18:28 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:28] "[36mGET /static/hangman_6.png HTTP/1.1[0m" 304 -
+06/05/2024 19:18:28 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:18:40 - root - INFO - New game started
+06/05/2024 19:18:40 - root - INFO - Topic: countries
+06/05/2024 19:18:40 - root - INFO - Word to guess: france
+06/05/2024 19:18:40 - root - INFO - Displayed word: _ _ _ _ _ _
+06/05/2024 19:18:40 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:40] "GET /game HTTP/1.1" 200 -
+06/05/2024 19:18:40 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:40] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 19:18:40 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:40] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:18:51 - root - INFO - Correct guess: a
+06/05/2024 19:18:51 - root - INFO - Displayed word: _ _ A _ _ _
+06/05/2024 19:18:51 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:51] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:18:51 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:51] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 19:18:51 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:51] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:18:51 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:18:55 - root - INFO - Incorrect guess: s
+06/05/2024 19:18:55 - root - INFO - Displayed word: _ _ A _ _ _
+06/05/2024 19:18:55 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:55] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:18:55 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:55] "[36mGET /static/hangman_1.png HTTP/1.1[0m" 304 -
+06/05/2024 19:18:55 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:55] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:18:55 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:18:59 - root - INFO - Incorrect guess: i
+06/05/2024 19:18:59 - root - INFO - Displayed word: _ _ A _ _ _
+06/05/2024 19:18:59 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:59] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:18:59 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:59] "[36mGET /static/hangman_2.png HTTP/1.1[0m" 304 -
+06/05/2024 19:18:59 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:59] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:18:59 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:18:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:19:13 - root - INFO - Incorrect guess: k
+06/05/2024 19:19:13 - root - INFO - Displayed word: _ _ A _ _ _
+06/05/2024 19:19:13 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:19:13] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:19:13 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:19:13] "[36mGET /static/hangman_3.png HTTP/1.1[0m" 304 -
+06/05/2024 19:19:13 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:19:13] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:19:13 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:19:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:19:20 - root - INFO - Incorrect guess: m
+06/05/2024 19:19:20 - root - INFO - Displayed word: _ _ A _ _ _
+06/05/2024 19:19:20 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:19:20] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:19:20 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:19:20] "[36mGET /static/hangman_4.png HTTP/1.1[0m" 304 -
+06/05/2024 19:19:20 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:19:20] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:19:20 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:19:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:19:34 - root - INFO - Correct guess: e
+06/05/2024 19:19:34 - root - INFO - Displayed word: _ _ A _ _ E
+06/05/2024 19:19:34 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:19:34] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:19:34 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:19:34] "[36mGET /static/hangman_4.png HTTP/1.1[0m" 304 -
+06/05/2024 19:19:34 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:19:34] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:19:34 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:19:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:20:30 - root - INFO - Incorrect guess: l
+06/05/2024 19:20:30 - root - INFO - Displayed word: _ _ A _ _ E
+06/05/2024 19:20:30 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:20:30] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:20:30 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:20:30] "[36mGET /static/hangman_5.png HTTP/1.1[0m" 304 -
+06/05/2024 19:20:30 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:20:30] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:20:30 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:20:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:20:42 - root - INFO - Correct guess: f
+06/05/2024 19:20:42 - root - INFO - Displayed word: F _ A _ _ E
+06/05/2024 19:20:42 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:20:42] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:20:42 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:20:42] "[36mGET /static/hangman_5.png HTTP/1.1[0m" 304 -
+06/05/2024 19:20:42 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:20:42] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:20:42 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:20:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:20:49 - root - INFO - Correctly guessed word: france
+06/05/2024 19:20:49 - root - INFO - Congratulations! You guessed the word correctly!
+06/05/2024 19:20:49 - root - INFO - Displayed word: F R A N C E
+06/05/2024 19:20:49 - root - INFO - Congratulations! You guessed the word correctly!
+06/05/2024 19:20:49 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:20:49] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:20:49 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:20:49] "[36mGET /static/hangman_5.png HTTP/1.1[0m" 304 -
+06/05/2024 19:20:49 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:20:49] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:20:49 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:20:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:20:54 - root - INFO - New game started
+06/05/2024 19:20:54 - root - INFO - Topic: sport
+06/05/2024 19:20:54 - root - INFO - Word to guess: boxing
+06/05/2024 19:20:54 - root - INFO - Displayed word: _ _ _ _ _ _
+06/05/2024 19:20:54 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:20:54] "GET /game HTTP/1.1" 200 -
+06/05/2024 19:20:54 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:20:54] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 19:20:54 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:20:54] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:22:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:22:15] "GET / HTTP/1.1" 200 -
+06/05/2024 19:22:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:22:15] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 19:22:15 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:22:15] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:45:44 - root - INFO - New game started
+06/05/2024 19:45:44 - root - INFO - Topic: countries
+06/05/2024 19:45:44 - root - INFO - Word to guess: india
+06/05/2024 19:45:44 - root - INFO - Displayed word: _ _ _ _ _
+06/05/2024 19:45:44 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:45:44] "GET /game HTTP/1.1" 200 -
+06/05/2024 19:45:44 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:45:44] "[36mGET /static/hangman_0.png HTTP/1.1[0m" 304 -
+06/05/2024 19:45:45 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:45:45] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:46:10 - root - INFO - Incorrect guess: s
+06/05/2024 19:46:10 - root - INFO - Displayed word: _ _ _ _ _
+06/05/2024 19:46:10 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:46:10] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:46:10 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:46:10] "[36mGET /static/hangman_1.png HTTP/1.1[0m" 304 -
+06/05/2024 19:46:10 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:46:10] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:46:10 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:46:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:46:14 - root - INFO - Correct guess: a
+06/05/2024 19:46:14 - root - INFO - Displayed word: _ _ _ _ A
+06/05/2024 19:46:14 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:46:14] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:46:14 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:46:14] "[36mGET /static/hangman_1.png HTTP/1.1[0m" 304 -
+06/05/2024 19:46:14 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:46:14] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:46:14 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:46:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:46:38 - root - INFO - Correct guess: i
+06/05/2024 19:46:38 - root - INFO - Displayed word: I _ _ I A
+06/05/2024 19:46:38 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:46:38] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:46:38 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:46:38] "[36mGET /static/hangman_1.png HTTP/1.1[0m" 304 -
+06/05/2024 19:46:38 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:46:38] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:46:39 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:46:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:47:49 - root - INFO - Incorrect guess: e
+06/05/2024 19:47:49 - root - INFO - Displayed word: I _ _ I A
+06/05/2024 19:47:49 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:47:49] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:47:49 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:47:49] "[36mGET /static/hangman_2.png HTTP/1.1[0m" 304 -
+06/05/2024 19:47:49 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:47:49] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:47:49 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:47:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:48:34 - root - INFO - Correct guess: d
+06/05/2024 19:48:34 - root - INFO - Displayed word: I _ D I A
+06/05/2024 19:48:34 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:48:34] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:48:34 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:48:34] "[36mGET /static/hangman_2.png HTTP/1.1[0m" 304 -
+06/05/2024 19:48:34 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:48:34] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:48:34 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:48:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:48:43 - root - INFO - Correct guess: n
+06/05/2024 19:48:43 - root - INFO - Congratulations! You guessed the word correctly!
+06/05/2024 19:48:43 - root - INFO - Displayed word: I N D I A
+06/05/2024 19:48:43 - root - INFO - Congratulations! You guessed the word correctly!
+06/05/2024 19:48:43 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:48:43] "POST /game HTTP/1.1" 200 -
+06/05/2024 19:48:43 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:48:43] "[36mGET /static/hangman_2.png HTTP/1.1[0m" 304 -
+06/05/2024 19:48:43 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:48:43] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+06/05/2024 19:48:43 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:48:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06/05/2024 19:54:56 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:54:56] "GET / HTTP/1.1" 200 -
+06/05/2024 19:54:56 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:54:56] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+06/05/2024 19:54:56 - werkzeug - INFO - 127.0.0.1 - - [06/May/2024 19:54:56] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+07/05/2024 12:27:52 - werkzeug - INFO - 127.0.0.1 - - [07/May/2024 12:27:52] "GET / HTTP/1.1" 200 -
+07/05/2024 12:27:52 - werkzeug - INFO - 127.0.0.1 - - [07/May/2024 12:27:52] "[36mGET /static/unnamed.gif HTTP/1.1[0m" 304 -
+07/05/2024 12:27:52 - werkzeug - INFO - 127.0.0.1 - - [07/May/2024 12:27:52] "[36mGET /static/hangmangame.jpg HTTP/1.1[0m" 304 -
+07/05/2024 12:27:53 - werkzeug - INFO - 127.0.0.1 - - [07/May/2024 12:27:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

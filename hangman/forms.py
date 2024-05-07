@@ -26,11 +26,6 @@ class PrisijungimoForma(FlaskForm):
     prisiminti = BooleanField("Remember me")
     submit = SubmitField('LOG IN')
 
-class IrasasForm(FlaskForm):
-    pajamos = BooleanField('Pajamos')
-    suma = FloatField('Suma', [DataRequired()])
-    submit = SubmitField('Įvesti')
-
 class PaskyrosAtnaujinimoForma(FlaskForm):
     vardas = StringField('Name', [DataRequired()])
     el_pastas = StringField('Email', [DataRequired()])

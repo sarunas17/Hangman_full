@@ -53,14 +53,13 @@ class Hangman:
         try:
             if guess.isalpha() and len(guess) == 1 or len(guess) == len(self.word_to_guess):
                 return True
-            else:
-                return False
+            return False
         except Exception as e:
             print("Error:", e)
     
 
-    def is_already_checked(self, guess: str) -> Optional[bool]:
-        if guess.isalpha() and len(guess) == 1 or len(guess) == len(self.word_to_guess):
+    def is_already_checked(self, guess: str) -> bool:
+        if self.input_is_valid(guess):
             if guess in self.guessed_letters:
                 return True
         return False
